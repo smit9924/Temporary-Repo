@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Plotting</title>
+    <script src="https://cdn.fusioncharts.com/fusioncharts/latest/fusioncharts.js"></script>
+    <script src="https://cdn.fusioncharts.com/fusioncharts/latest/themes/fusioncharts.theme.fusion.js"></script>
+    <script>
+
+        var rowData = [
+            {
+                "date": "2018-05-06",
+                "temperatureC": 1,
+                "summary": "Freezing",
+                "temperatureF": 33
+            },
+            {
+                "date": "2018-05-07",
+                "temperatureC": 14,
+                "summary": "Bracing",
+                "temperatureF": 57
+            },
+            {
+                "date": "2018-05-08",
+                "temperatureC": -13,
+                "summary": "Freezing",
+                "temperatureF": 9
+            },
+            {
+                "date": "2018-05-09",
+                "temperatureC": -16,
+                "summary": "Balmy",
+                "temperatureF": 4
+            },
+            {
+                "date": "2018-05-10",
+                "temperatureC": -2,
+                "summary": "Chilly",
+                "temperatureF": 29
+            }
+        ]
+
+        var dataConfig = {
+            chart: {
+                caption: "Temprature",
+                subcaption: "(XYZ)",
+
+            },
+            categories: [
+                {
+
+                }
+            ]
+        }
+
+        const chartConfig = {
+            type: "scrillline2d",
+            theme: "fusion",
+            dataConfig
+        }
+
+        FusionCharts.ready(function () {
+            var fusion = new FusionCharts(chartConfig)
+            fusion.render()
+        })
+    </script>
+</head>
+
+<body>
+    <div class="chart-container">Container</div>
+</body>
+
+</html>
